@@ -13,6 +13,10 @@
     <!-- this I added to get the suppoort of font awesome icon support -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+
 </head>
 
 <body>
@@ -78,23 +82,26 @@
         <div class="container mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-2 items-center">
             <!-- Left Content -->
             <div>
-                <h1 class="text-4xl md:text-7xl font-bold leading-tight text-gray-800 mb-12">
+                <h1 class="text-4xl md:text-7xl font-bold leading-tight text-gray-800 mb-12" data-aos="fade-up">
                     Hello!!! <br> We Are Creative Digital Agency.
                 </h1>
-                <p class="text-sm font-semibold text-gray-700 mb-12 ml-1">
+                <p class="text-sm font-semibold text-gray-700 mb-12 ml-1" data-aos="fade-up">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua.
                 </p>
-                <a href="#contact"
-                    class="bg-yellow-300 ml-1 text-black font-semibold py-3 px-7 rounded-sm shadow-sm transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-yellow-500/50">
-                    SEND MESSAGE
-                </a>
+                <div data-aos="fade-up">
+                    <a href="#contact" data-aos="fade-up"
+                        class="bg-yellow-300 ml-1 text-black font-semibold py-3 px-7 rounded-sm shadow-sm transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-yellow-500/50">
+                        SEND MESSAGE
+                    </a>
+                </div>
+
 
             </div>
 
             <!-- Right Content -->
             <div class="flex justify-end hidden md:flex">
-                <img src="/assets/hero/Image-1.png" alt="Example Image 1"
+                <img src="/assets/hero/Image-1.png" alt="Example Image 1 " data-aos="fade-up"
                     class="max-w-full w-[90%] rounded-lg shadow-md">
             </div>
         </div>
@@ -105,10 +112,11 @@
     <section id="work" class="bg-white pb-24">
         <div class="container mx-auto px-6 md:px-[150px]">
 
-            <h1 class="text-4xl md:text-6xl font-bold leading-tight text-gray-800 mb-12">WORK SHOWCASE.</h1>
+            <h1 data-aos="fade-up" class="text-4xl md:text-6xl font-bold leading-tight text-gray-800 mb-12">WORK
+                SHOWCASE.</h1>
 
             <div class="list">
-                <div class="image-container rounded-lg">
+                <div data-aos="fade-up" class="image-container rounded-lg">
                     <img src="/assets/work/Image-3.jpg" alt="Image 2" class="rounded-lg shadow-md">
                     <div class="overlay absolute inset-0 flex flex-col justify-center items-center">
                         <div class="main-text text-xl font-bold uppercase pb-2">Artwork</div>
@@ -116,7 +124,7 @@
                     </div>
                 </div>
 
-                <div class="image-container rounded-lg">
+                <div data-aos="fade-up" class="image-container rounded-lg">
                     <img src="/assets/work/Image-4.jpg" alt="Image 6" class="rounded-lg shadow-md">
                     <div class="overlay absolute inset-0 flex flex-col justify-center items-center">
                         <div class="main-text text-xl font-bold uppercase pb-2">Artwork</div>
@@ -124,7 +132,7 @@
                     </div>
                 </div>
 
-                <div class="image-container  rounded-lg">
+                <div data-aos="fade-up" class="image-container  rounded-lg">
                     <img src="/assets/work/Image-2.jpg" alt="Image 2" class="rounded-lg shadow-md">
                     <div class="overlay absolute inset-0 flex flex-col justify-center items-center">
                         <div class="main-text text-xl font-bold uppercase pb-2">Artwork</div>
@@ -132,7 +140,7 @@
                     </div>
                 </div>
 
-                <div class="image-container  rounded-lg">
+                <div data-aos="fade-up" class="image-container  rounded-lg">
                     <img src="/assets/work/Image-5.jpg" alt="Image 2" class="rounded-lg shadow-md">
                     <div class="overlay absolute inset-0 flex flex-col justify-center items-center">
                         <div class="main-text text-xl font-bold uppercase pb-2">Artwork</div>
@@ -140,7 +148,7 @@
                     </div>
                 </div>
 
-                <div class="image-container rounded-lg">
+                <div data-aos="fade-up" class="image-container rounded-lg">
                     <img src="/assets/work/Image-3.jpg" alt="Image 2" class="rounded-lg shadow-md">
                     <div class="overlay absolute inset-0 flex flex-col justify-center items-center ">
                         <div class="main-text text-xl font-bold uppercase pb-2">Artwork</div>
@@ -148,7 +156,7 @@
                     </div>
                 </div>
 
-                <div class="image-container rounded-lg">
+                <div data-aos="fade-up" class="image-container rounded-lg">
                     <img src="/assets/work/Image-6.jpg" alt="Image 2" class="rounded-lg shadow-md">
                     <div class="overlay absolute inset-0 flex flex-col justify-center items-center">
                         <div class="main-text text-xl font-bold uppercase pb-2">Artwork</div>
@@ -158,7 +166,7 @@
             </div>
 
             <!-- Button -->
-            <div class="mt-8 text-center">
+            <div data-aos="fade-up" class="mt-8 text-center">
                 <a href="#work"
                     class="bg-yellow-300 ml-1 text-black font-semibold py-3 px-7 rounded-sm shadow-sm transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-yellow-500/50">
                     SHOW ME MORE
@@ -169,8 +177,8 @@
 
 
     <!-- Blog Section.. I hope that this is the blog section -->
-    <section id="blog" class="flex flex-col items-center gap-4 pb-24 text-gray-800" id="speciality">
-        <div
+    <section id="blog" class="flex flex-col items-center gap-4 pb-24 text-gray-800 " id="speciality">
+        <div data-aos="fade-up"
             class="flex justify-start items-center sm:justify-center gap-12 pt-5 w-full overflow-x-auto px-8 sm:px-8 lg:px-8">
             <a href="#" class="flex-shrink-0 hover:translate-y-[-10px] transition-all duration-500">
                 <img class="w-16 sm:w-20 md:w-24 lg:w-32 xl:w-40 mb-2" src="/assets/blog/Logo-1.png" alt="Logo 1" />
@@ -198,9 +206,9 @@
     <!-- About Us Section -->
     <section id="about" class="container mx-auto px-8 lg:px-[150px] py-8">
 
-        <h2 class="text-4xl md:text-6xl font-bold leading-tight text-gray-800 mb-12">ABOUT US.</h2>
+        <h2 data-aos="fade-up" class="text-4xl md:text-6xl font-bold leading-tight text-gray-800 mb-12">ABOUT US.</h2>
 
-        <p class="mb-20 font-semibold">
+        <p class="mb-20 font-semibold" data-aos="fade-up">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt <br> ut labore et
             dolore
             magna aliqua.
@@ -208,7 +216,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <!-- Card 1 -->
-            <div class="bg-gray-100">
+            <div data-aos="fade-up" class="bg-gray-100">
                 <img src="/assets/about/Image-7.jpg" alt="Team Member 1" class="w-full h-auto object-cover" />
                 <div class="bg-yellow-300 p-2 text-center">
                     <h3 class="font-bold pt-4 pb-1">Luke Skywalker</h3>
@@ -217,7 +225,7 @@
             </div>
 
             <!-- Card 2 -->
-            <div class="bg-gray-100">
+            <div data-aos="fade-up" class="bg-gray-100">
                 <img src="/assets/about/Image-8.jpg" alt="Team Member 1" class="w-full h-auto object-cover" />
                 <div class="bg-yellow-300 p-2 text-center">
                     <h3 class="font-bold pt-4 pb-1">Luke Skywalker</h3>
@@ -226,7 +234,7 @@
             </div>
 
             <!-- Little About Us Section -->
-            <div class="bg-white p-4 flex flex-col  justify-center ">
+            <div data-aos="fade-up" class="bg-white p-4 flex flex-col  justify-center ">
                 <h3 class="text-xl font-bold mb-8">Little About Us</h3>
                 <p class="text-sm font-semibold mb-12">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
@@ -240,9 +248,9 @@
     </section>
 
     <!-- Contact Us Section -->
-    <section id="contact" class="container mx-auto px-8 lg:px-[150px] py-12">
-        <h2 class="text-4xl md:text-6xl font-bold leading-tight text-gray-800 mb-12">CONTACT US.</h2>
-        <p class="mb-12 font-semibold">
+    <section id="contact" class="container mx-auto px-8 lg:px-[150px] py-24">
+        <h2 data-aos="fade-up" class="text-4xl md:text-6xl font-bold leading-tight text-gray-800 mb-12">CONTACT US.</h2>
+        <p data-aos="fade-up" class="mb-8 font-semibold">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt <br> ut labore et
             dolore
             magna aliqua.
@@ -251,21 +259,21 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
             <!-- Contact Form -->
             <div>
-                <h3 class="text-xl font-bold mb-6">Send Us Message.</h3>
+                <h3 data-aos="fade-up" class="text-xl font-bold mb-6">Send Us Message.</h3>
                 <form action="#" method="post" class="space-y-4">
 
-                    <input type="text" placeholder="Name"
+                    <input data-aos="fade-up" type="text" placeholder="Name"
                         class="w-full p-4 bg-gray-200 rounded-sm focus:ring-1 focus:ring-yellow-400 focus:outline-none placeholder-gray-400 placeholder:font-semibold"
                         required />
-                    <input type="email" placeholder="Email"
+                    <input data-aos="fade-up" type="email" placeholder="Email"
                         class="w-full p-4 bg-gray-200 rounded-sm focus:ring-1 focus:ring-yellow-400 focus:outline-none placeholder-gray-400 placeholder:font-semibold"
                         required />
-                    <textarea placeholder="Message" rows="4"
+                    <textarea data-aos="fade-up" placeholder="Message" rows="4"
                         class="w-full p-4 bg-gray-200 rounded-sm focus:ring-1 focus:ring-yellow-400 focus:outline-none placeholder-gray-400 placeholder:font-semibold"
                         required></textarea>
 
                     <div class="flex justify-start">
-                        <button type="submit"
+                        <button data-aos="fade-up" type="submit"
                             class="bg-yellow-300  text-black font-semibold py-3 px-7 rounded-sm shadow-sm transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-yellow-500/50">
                             SEND MESSAGE
                         </button>
@@ -276,7 +284,7 @@
 
             <!--  Image for Contact us -->
             <div class="flex items-center justify-center">
-                <img src="/assets/contact/Image-9.jpg" alt="Contact Us"
+                <img data-aos="fade-up" src="/assets/contact/Image-9.jpg" alt="Contact Us"
                     class="w-full h-auto rounded-md object-cover hidden md:flex" />
             </div>
         </div>
@@ -285,7 +293,7 @@
 
 
     <!-- Links section -->
-    <section class="flex justify-center  py-8 md:py-18 gap-12  sm:overflow-x-visible">
+    <section data-aos="fade-up" class="flex justify-center  py-8 md:py-18 gap-12  sm:overflow-x-visible">
         <a href="#">
             <img src="/assets/links/Icon-1.png" alt="Image 1"
                 class="w-10 h-10 hover:translate-y-[-10px] transition-all duration-500 ease-in-out object-cover flex-shrink-0">

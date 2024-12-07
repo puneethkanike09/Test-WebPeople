@@ -63,4 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-
+AOS.init({
+    duration: 1000, // Animation duration in milliseconds
+    once: false,     // Whether animation should happen only once
+});
