@@ -96,3 +96,17 @@ nav a.active {
     transform: scale(1.4);
     transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
 }
+
+::-webkit-scrollbar {
+  @apply hidden
+}
+
+div {
+  overflow-x: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+div::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari, Edge */
+}
