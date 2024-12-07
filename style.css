@@ -19,5 +19,14 @@ body {
     z-index: 50;
 }
 
+::-moz-selection { 
+  color: black;
+  background: yellow;
+}
+
+::selection {
+  color: black;
+  background: yellow;
+}
 
 
