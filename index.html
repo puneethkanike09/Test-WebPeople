@@ -7,6 +7,8 @@
     <title>Smooth Scroll Test</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -284,11 +286,30 @@
         </a>
     </section>
 
-    <footer class="bg-gray-900 text-white py-8">
-        <div class="container mx-auto px-6 lg:px-12 text-center">
-            <p class="text-lg font-semibold">Thank you for visiting our website!</p>
+    <footer class="bg-gray-900">
+        <div
+            class="container mx-auto py-2 px-6 lg:px-24 flex flex-col md:flex-row items-center justify-between text-white">
+            <!-- Logo and Copyright -->
+            <div class="flex items-center space-x-4 mb-4 md:mb-0">
+                <!-- Logo -->
+                <div>
+                    <img src="/assets/footer/Main-Logo-Footer.png" alt="Logo" class="w-20 h-20 object-contain">
+                </div>
+                <!-- Copyright -->
+                <p class="text-gray-500 text-sm">&copy; 2020 - thewebpeople. All Rights Reserved.</p>
+            </div>
+
+            <!-- Back to Top -->
+            <div>
+                <a href="#" class="text-gray-400 hover:text-yellow-400 text-sm transition flex items-center space-x-2">
+                    <i class="fas fa-arrow-up"></i> <!-- Up Arrow Icon -->
+                    <span>BACK TO TOP</span>
+                </a>
+            </div>
         </div>
     </footer>
+
+
 </body>
 
 <script src="script.js"></script>
