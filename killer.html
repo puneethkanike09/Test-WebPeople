@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="bg-gray-800 text-white">
+        <nav class="container mx-auto flex items-center justify-between p-4">
+            <!-- Logo -->
+            <a href="#" class="text-xl font-bold">LOGO</a>
+
+            <!-- Navigation Links for Desktop -->
+            <ul class="hidden md:flex space-x-8">
+                <li><a href="#work" class="hover:text-gray-400">WORK</a></li>
+                <li><a href="#about" class="hover:text-gray-400">ABOUT</a></li>
+                <li><a href="#blog" class="hover:text-gray-400">BLOG</a></li>
+                <li><a href="#contact" class="hover:text-gray-400">CONTACT</a></li>
+            </ul>
+
+            <!-- Hamburger Icon for Mobile -->
+            <button id="menu-toggle" class="md:hidden">
+                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </nav>
+
+        <!-- Sidebar for Mobile -->
+        <div id="sidebar"
+            class="fixed inset-y-0 left-0 w-64 bg-gray-900 text-white transform -translate-x-full transition-transform duration-300 ease-in-out">
+            <button id="close-sidebar" class="absolute top-4 right-4">
+                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <ul class="mt-16 space-y-6 text-center">
+                <li><a href="#work" class="block hover:text-gray-400" onclick="closeSidebar()">WORK</a></li>
+                <li><a href="#about" class="block hover:text-gray-400" onclick="closeSidebar()">ABOUT</a></li>
+                <li><a href="#blog" class="block hover:text-gray-400" onclick="closeSidebar()">BLOG</a></li>
+                <li><a href="#contact" class="block hover:text-gray-400" onclick="closeSidebar()">CONTACT</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <script>
+        const sidebar = document.getElementById('sidebar');
+        const menuToggle = document.getElementById('menu-toggle');
+        const closeSidebarButton = document.getElementById('close-sidebar');
+
+        // Function to open the sidebar
+        menuToggle.addEventListener('click', () => {
+            sidebar.classList.remove('-translate-x-full');
+        });
+
+        // Function to close the sidebar
+        closeSidebarButton.addEventListener('click', closeSidebar);
+
+        function closeSidebar() {
+            sidebar.classList.add('-translate-x-full');
+        }
+    </script>
+</body>
+
+</html>

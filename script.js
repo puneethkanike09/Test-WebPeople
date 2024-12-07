@@ -1,6 +1,16 @@
-const menuToggle = document.getElementById('menu-toggle');
-const mobileMenu = document.getElementById('mobile-menu');
 
+const sidebar = document.getElementById('sidebar');
+const menuToggle = document.getElementById('menu-toggle');
+const closeSidebarButton = document.getElementById('close-sidebar');
+
+// Function to open the sidebar
 menuToggle.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
+    sidebar.classList.remove('-translate-x-full');
 });
+
+// Function to close the sidebar
+closeSidebarButton.addEventListener('click', closeSidebar);
+
+function closeSidebar() {
+    sidebar.classList.add('-translate-x-full');
+}
