@@ -1,4 +1,4 @@
-
+// this code I added to toggle between the sidebar and the main content
 const sidebar = document.getElementById('sidebar');
 const menuToggle = document.getElementById('menu-toggle');
 const closeSidebarButton = document.getElementById('close-sidebar');
@@ -17,6 +17,7 @@ function closeSidebar() {
 
 
 
+// This is to identify the active class so that I can add the styles for that
 document.addEventListener('DOMContentLoaded', () => {
     const desktopLinks = document.querySelectorAll('nav a');
     const sidebarLinks = document.querySelectorAll('#sidebar a');
@@ -40,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Update active class based on scroll position for both menus
     window.addEventListener('scroll', () => {
-        const scrollPosition = window.scrollY + 100; // Adjust offset as needed
+        const scrollPosition = window.scrollY + 150;
 
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
