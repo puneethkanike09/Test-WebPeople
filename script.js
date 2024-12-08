@@ -68,3 +68,61 @@ AOS.init({
     duration: 1000,
     once: false,
 });
+
+
+
+// Theme toggle functionality for Desktop view
+
+// Get references to the theme toggle button and icon
+const themeToggle = document.getElementById('theme-toggle');
+const themeIcon = document.getElementById('theme-icon');
+
+// Check the user's saved preference or default to system preference
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+    document.documentElement.classList.toggle('dark', savedTheme === 'dark');
+    themeIcon.className = savedTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+} else {
+    // Default to system preference if no user preference is set
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    document.documentElement.classList.toggle('dark', systemPrefersDark);
+    themeIcon.className = systemPrefersDark ? 'fas fa-moon' : 'fas fa-sun';
+}
+
+// Add event listener for theme toggle button
+themeToggle.addEventListener('click', () => {
+    const isDarkMode = document.documentElement.classList.toggle('dark');
+    // Update icon based on the mode
+    themeIcon.className = isDarkMode ? 'fas fa-moon' : 'fas fa-sun';
+    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+});
+
+
+
+
+
+
+//toggle theme functionality for the mobile view
+
+// Get references to the mobile theme toggle button and icon
+const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
+const mobileThemeIcon = document.getElementById('mobile-theme-icon');
+
+
+if (savedTheme) {
+    document.documentElement.classList.toggle('dark', savedTheme === 'dark');
+    mobileThemeIcon.className = savedTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+} else {
+    // Default to system preference if no user preference is set
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    document.documentElement.classList.toggle('dark', systemPrefersDark);
+    mobileThemeIcon.className = systemPrefersDark ? 'fas fa-moon' : 'fas fa-sun';
+}
+
+// Add event listener for theme toggle button
+mobileThemeToggle.addEventListener('click', () => {
+    const isDarkMode = document.documentElement.classList.toggle('dark');
+    // Update icon based on the mode
+    mobileThemeIcon.className = isDarkMode ? 'fas fa-moon' : 'fas fa-sun';
+    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+});

@@ -1,3 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
 /* this I added to get the support of google fonts and I used the Outfit font ok */
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
@@ -40,7 +46,7 @@ body {
 
 .list img {
   width: 100%;
-  margin-bottom: 20px; 
+  margin-bottom: 15px; 
 }
 
 .image-container {
@@ -84,10 +90,16 @@ body {
 
 /* this I added for the active class style */
 nav a.active {
-    color: rgb(243, 218, 0); /* Highlight color */
+    color: rgb(243, 218, 0); /* Highlight color for light mode */
     font-weight: bold;
-    
 }
+
+.dark nav a.active {
+    color: rgb(243, 218, 0); /* Highlight color for dark mode */
+}
+
+
+
 
 /* and this for the mobile view style */
 #sidebar a.active {
